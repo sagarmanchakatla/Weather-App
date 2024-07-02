@@ -4,6 +4,7 @@ import Map from "./Map";
 import HeaderSection from "./HeaderSection";
 import MiddleSection from "./MiddleSection";
 import LowerSection from "./LowerSection";
+import Maps from "./Maps";
 
 function Weather() {
   const [weatherData, setWeatherData] = useState(null);
@@ -46,7 +47,6 @@ function Weather() {
                 Submit
               </button>
             </div>
-
             <HeaderSection data={weatherData} />
             <MiddleSection data={weatherData} />
             <LowerSection data={weatherData} />
@@ -55,7 +55,8 @@ function Weather() {
           <p className="text-gray-700 text-center">Loading...</p>
         )}
       </div>
-      <Map data={weatherData}></Map>
+      {/* <Map data={weatherData}></Map> */}
+      <Maps data={weatherData}></Maps>
     </>
   );
 }

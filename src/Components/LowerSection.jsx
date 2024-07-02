@@ -4,15 +4,25 @@ function LowerSection({ data }) {
       <div className="flex flex-col sm:flex-row sm:justify-around">
         <div className="m-4 text-center">
           <h3 className="text-gray-900 font-bold">Humidity</h3>
-          <p className="text-gray-700">{data.current.humidity}%</p>
+          <p className="text-gray-700">{data?.current?.humidity}%</p>
         </div>
         <div className="m-4 text-center">
           <h3 className="text-gray-900 font-bold">Dew Point</h3>
-          <p className="text-gray-700">{data.current.dewpoint_c} &deg;C</p>
+          <p className="text-gray-700">{data?.current?.dewpoint_c} &deg;C</p>
         </div>
         <div className="m-4 text-center">
           <h3 className="text-gray-900 font-bold">Wind Speed</h3>
-          <p className="text-gray-700">{data.current.wind_mph} mph</p>
+          <p className="text-gray-700">{data?.current?.wind_mph} mph</p>
+        </div>
+      </div>
+      <div className="flex flex-col sm:flex-row sm:justify-around mt-4">
+        <div className="m-4 text-center">
+          <h3 className="text-gray-900 font-bold">Latitude</h3>
+          <p className="text-gray-700">{data?.location?.lat}</p>
+        </div>
+        <div className="m-4 text-center">
+          <h3 className="text-gray-900 font-bold">Longitude</h3>
+          <p className="text-gray-700">{data?.location?.lon}</p>
         </div>
       </div>
     </>
